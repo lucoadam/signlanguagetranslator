@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Capture or Select Image"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/sLinearH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btnCapture"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="startHue"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/sSeekBarH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="180"
+            android:progress="18"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sLinearS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sLinearH"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="startSat"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/sSeekBarS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="255"
+            android:progress="0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sLinearV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sLinearS"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="startVal"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/sSeekBarV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="255"
+            android:progress="137"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sLinearV"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stopHue"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="180"
+            android:progress="170"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearH"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stopSat"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="255"
+            android:progress="255"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearS"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stopVal"
+            android:textSize="20dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:max="255"
+            android:progress="255"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearV"/>
+
+</RelativeLayout>

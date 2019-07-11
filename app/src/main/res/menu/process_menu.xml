@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/original"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="original"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/preProcessing"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Pre-Processing" >
+        <menu>
+            <item android:id="@+id/grayScale"
+                android:title="Convert to Gray"/>
+            <item android:id="@+id/adaptiveThresholding"
+                android:title="segmentation"/>
+            <item android:id="@+id/boundaryDetection"
+                android:title="Boudary Detect"/>
+            <item android:id="@+id/erode"
+                android:title="Erosion"/>
+            <item android:title="Dilation"
+                android:id="@+id/dilate"/>
+            <item android:id="@+id/blurr"
+                android:title="Gaussian Blurr"/>
+            <item android:title="Canny Edge Detection"
+                android:id="@+id/canny"/>
+        </menu>
+    </item>
+    <item android:title="Detect Face"
+        android:id="@+id/detectFace"/>
+    <item android:id="@+id/detectHand"
+        android:title="Detect Hand"/>
+    <item android:id="@+id/drawObject"
+        android:title="Find Object"/>
+    <item android:title="Fourier Descriptor"
+        android:id="@+id/fourierDes"/>
+    <item android:id="@+id/trainData"
+        android:title="Train Data"/>
+    <item android:title="Recognize"
+        android:id="@+id/recognize"/>
+
+</menu>
